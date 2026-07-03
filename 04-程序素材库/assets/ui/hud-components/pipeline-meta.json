@@ -1,0 +1,84 @@
+{
+  "outputs": [
+    {
+      "slug": "life-panel",
+      "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_0ddbfefdf1782a2e016a4405fed3608191ac1f343bbf724366.png",
+      "raw": "assets/ui/hud-components/life-panel-raw.png",
+      "clean": "assets/ui/hud-components/life-panel.png",
+      "size": [
+        2039,
+        464
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        2031,
+        456
+      ]
+    },
+    {
+      "slug": "timer-panel",
+      "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_0ddbfefdf1782a2e016a44063a9d04819191d539712fb7ab99.png",
+      "raw": "assets/ui/hud-components/timer-panel-raw.png",
+      "clean": "assets/ui/hud-components/timer-panel.png",
+      "size": [
+        1627,
+        694
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        1619,
+        686
+      ]
+    },
+    {
+      "slug": "radar-frame",
+      "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_0ddbfefdf1782a2e016a44068152488191b217ad381b63d5e4.png",
+      "raw": "assets/ui/hud-components/radar-frame-raw.png",
+      "clean": "assets/ui/hud-components/radar-frame.png",
+      "size": [
+        1131,
+        1135
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        1123,
+        1127
+      ]
+    },
+    {
+      "slug": "ai-energy-panel",
+      "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_0ddbfefdf1782a2e016a4406d4baa48191863b9e339d0494b8.png",
+      "raw": "assets/ui/hud-components/ai-energy-panel-raw.png",
+      "clean": "assets/ui/hud-components/ai-energy-panel.png",
+      "size": [
+        1722,
+        661
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        1714,
+        653
+      ]
+    },
+    {
+      "slug": "ai-energy-panel-empty",
+      "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_00e9b2b571fa9385016a440c24f15881919c02bcecb74cb42c.png",
+      "raw": "assets/ui/hud-components/ai-energy-panel-empty-raw.png",
+      "clean": "assets/ui/hud-components/ai-energy-panel-empty.png",
+      "size": [
+        1720,
+        659
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        1712,
+        651
+      ]
+    }
+  ]
+}

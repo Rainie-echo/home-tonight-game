@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "name": "night-cockpit-demo-ui-hotzone-layout",
+    "baseCoordinateNote": "Coordinates are in 1280x720 game canvas space. Visual, text, and hitbox layers are exported separately.",
+    "status": "draft-for-manual-layout"
+  },
+  "baseScene": [
+    {
+      "src": "assets/backgrounds/stage-01-dusk-road-empty.png",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "opacity": 1
+    },
+    {
+      "src": "assets/foreground/headlight-beams-rain-v1-clean.png",
+      "x": 26,
+      "y": 216,
+      "w": 1228,
+      "h": 432,
+      "opacity": 0.22,
+      "blend": "screen"
+    },
+    {
+      "src": "assets/foreground/car-hood-real-v7-crop.png",
+      "x": 141,
+      "y": 493,
+      "w": 998,
+      "h": 310,
+      "opacity": 0.98
+    },
+    {
+      "src": "assets/foreground/cockpit-frame-only-v4.png",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "opacity": 0.96
+    }
+  ],
+  "screens": {
+    "cover": {
+      "label": "封面热区",
+      "width": 1280,
+      "height": 720,
+      "baseScene": [
+        {
+          "src": "assets/videos/cover-loop-v1.mp4",
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 720,
+          "opacity": 1
+        }
+      ],
+      "visual": [],
+      "text": [],
+      "hitbox": [
+        {
+          "id": "coverStartHotzone",
+          "label": "封面开始游戏热区",
+          "x": 718,
+          "y": 480,
+          "w": 306,
+          "h": 112
+        }
+      ]
+    },
+    "start": {
+      "label": "开始界面",
+      "width": 1280,
+      "height": 720,
+      "shade": true,
+      "visual": [
+        {
+          "id": "startPanel",
+          "label": "开始页面板",
+          "x": 360,
+          "y": 122,
+          "w": 560,
+          "h": 410
+        },
+        {
+          "id": "startButtonVisual",
+          "label": "开始按钮视觉",
+          "x": 388,
+          "y": 456,
+          "w": 504,
+          "h": 52
+        },
+        {
+          "id": "startRuleGrid",
+          "label": "规则说明区域",
+          "x": 388,
+          "y": 334,
+          "w": 504,
+          "h": 98
+        }
+      ],
+      "text": [
+        {
+          "id": "startOverline",
+          "label": "开始页眉小字",
+          "sample": "雨夜回家生存 Demo",
+          "x": 388,
+          "y": 150,
+          "w": 250,
+          "h": 26
+        },
+        {
+          "id": "startTitle",
+          "label": "游戏标题",
+          "sample": "今晚必须回家",
+          "x": 388,
+          "y": 182,
+          "w": 420,
+          "h": 72
+        },
+        {
+          "id": "startCopy",
+          "label": "玩法说明文案",
+          "sample": "别撞人，也别撞鬼。三段夜路，撑过去就能回家。",
+          "x": 388,
+          "y": 270,
+          "w": 504,
+          "h": 54
+        },
+        {
+          "id": "startButtonText",
+          "label": "开始按钮文字",
+          "sample": "开始试玩",
+          "x": 388,
+          "y": 461,
+          "w": 504,
+          "h": 42
+        }
+      ],
+      "hitbox": [
+        {
+          "id": "startButtonHotzone",
+          "label": "开始按钮热区",
+          "x": 388,
+          "y": 456,
+          "w": 504,
+          "h": 52
+        }
+      ]
+    },
+    "gameplay": {
+      "label": "游戏界面",
+      "width": 1280,
+      "height": 720,
+      "visual": [
+        {
+          "id": "topHudPanel",
+          "label": "顶部HUD整图",
+          "asset": "topHudPanel",
+          "x": -23,
+          "y": -14,
+          "w": 1280,
+          "h": 214
+        },
+        {
+          "id": "disturbanceCall",
+          "label": "鬼来电底图",
+          "asset": "callBase",
+          "x": -4,
+          "y": 234,
+          "w": 371,
+          "h": 352
+        },
+        {
+          "id": "skillQ",
+          "label": "Q技能图标",
+          "asset": "qIcon",
+          "x": 280,
+          "y": 604,
+          "w": 86,
+          "h": 86
+        },
+        {
+          "id": "skillW",
+          "label": "W技能图标",
+          "asset": "wIcon",
+          "x": 428,
+          "y": 604,
+          "w": 86,
+          "h": 86
+        },
+        {
+          "id": "skillE",
+          "label": "E技能图标",
+          "asset": "eIcon",
+          "x": 576,
+          "y": 604,
+          "w": 86,
+          "h": 86
+        },
+        {
+          "id": "skillR",
+          "label": "R技能图标",
+          "asset": "rIcon",
+          "x": 724,
+          "y": 604,
+          "w": 86,
+          "h": 86
+        },
+        {
+          "id": "energyCard",
+          "label": "AI能量底图",
+          "asset": "aiEnergyPanel",
+          "x": 908,
+          "y": 566,
+          "w": 350,
+          "h": 134
+        },
+        {
+          "id": "energyIcon",
+          "label": "AI能量图标",
+          "asset": "aiEnergyIcon",
+          "x": 1166,
+          "y": 602,
+          "w": 52,
+          "h": 52
+        },
+        {
+          "id": "energyFillVisual",
+          "label": "AI能量填充槽视觉",
+          "x": 962,
+          "y": 595,
+          "w": 128,
+          "h": 74
+        },
+        {
+          "id": "hoodVisual",
+          "label": "车头视觉区域",
+          "x": 280,
+          "y": 492,
+          "w": 720,
+          "h": 170
+        }
+      ],
+      "text": [
+        {
+          "id": "lifeLabel",
+          "label": "生命值标签",
+          "sample": "生命值",
+          "x": 128,
+          "y": 37,
+          "w": 74,
+          "h": 24
+        },
+        {
+          "id": "lifeText",
+          "label": "生命值数字",
+          "sample": "100%",
+          "x": 322,
+          "y": 54,
+          "w": 72,
+          "h": 32
+        },
+        {
+          "id": "surviveTime",
+          "label": "显示时间数字",
+          "sample": "00:26",
+          "x": 509,
+          "y": 22,
+          "w": 324,
+          "h": 54
+        },
+        {
+          "id": "homeTime",
+          "label": "剩余时间文字",
+          "sample": "本关剩余 00:32",
+          "x": 507,
+          "y": 78,
+          "w": 308,
+          "h": 28
+        },
+        {
+          "id": "phaseText",
+          "label": "关卡标签",
+          "sample": "第1关 天还没黑",
+          "x": 559,
+          "y": 98,
+          "w": 232,
+          "h": 30
+        },
+        {
+          "id": "radarTitle",
+          "label": "雷达标题",
+          "sample": "前方雷达",
+          "x": 1110,
+          "y": 18,
+          "w": 118,
+          "h": 24
+        },
+        {
+          "id": "aiLevelText",
+          "label": "AI等级文字",
+          "sample": "AI Lv.1",
+          "x": 1084,
+          "y": 602,
+          "w": 90,
+          "h": 24
+        },
+        {
+          "id": "energyText",
+          "label": "AI能量百分比",
+          "sample": "0%",
+          "x": 1081,
+          "y": 623,
+          "w": 86,
+          "h": 34
+        },
+        {
+          "id": "skillQText",
+          "label": "Q技能文字",
+          "sample": "雷达脉冲",
+          "x": 270,
+          "y": 684,
+          "w": 112,
+          "h": 24
+        },
+        {
+          "id": "skillWText",
+          "label": "W技能文字",
+          "sample": "智能鸣笛",
+          "x": 418,
+          "y": 684,
+          "w": 112,
+          "h": 24
+        },
+        {
+          "id": "skillEText",
+          "label": "E技能文字",
+          "sample": "夜视摄像头",
+          "x": 566,
+          "y": 684,
+          "w": 112,
+          "h": 24
+        },
+        {
+          "id": "skillRText",
+          "label": "R技能文字",
+          "sample": "AI静音场",
+          "x": 714,
+          "y": 684,
+          "w": 112,
+          "h": 24
+        }
+      ],
+      "hitbox": [
+        {
+          "id": "carFrontActive",
+          "label": "车头撞击判定",
+          "x": 441,
+          "y": 510,
+          "w": 420,
+          "h": 190
+        },
+        {
+          "id": "roadVanishPoint",
+          "label": "道路最远处/生成起点",
+          "x": 560,
+          "y": 340,
+          "w": 160,
+          "h": 48
+        },
+        {
+          "id": "radarHotzone",
+          "label": "雷达显示热区",
+          "x": 1095,
+          "y": 25,
+          "w": 148,
+          "h": 148
+        },
+        {
+          "id": "popupCloseHotzone",
+          "label": "鬼来电关闭热区",
+          "x": 0,
+          "y": 234,
+          "w": 371,
+          "h": 354
+        },
+        {
+          "id": "skillQHotzone",
+          "label": "Q技能热区",
+          "x": 260,
+          "y": 594,
+          "w": 136,
+          "h": 112
+        },
+        {
+          "id": "skillWHotzone",
+          "label": "W技能热区",
+          "x": 408,
+          "y": 594,
+          "w": 136,
+          "h": 112
+        },
+        {
+          "id": "skillEHotzone",
+          "label": "E技能热区",
+          "x": 556,
+          "y": 594,
+          "w": 136,
+          "h": 112
+        },
+        {
+          "id": "skillRHotzone",
+          "label": "R技能热区",
+          "x": 704,
+          "y": 594,
+          "w": 136,
+          "h": 112
+        }
+      ]
+    }
+  }
+}

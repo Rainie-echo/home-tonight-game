@@ -1,0 +1,16 @@
+{
+  "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_02a3899d35790878016a4460e6edd88191b627557f329277e8.png",
+  "raw": "assets/foreground/cockpit-frame-v2-raw.png",
+  "clean": "assets/foreground/cockpit-frame-v2.png",
+  "size": [
+    1672,
+    941
+  ],
+  "alpha_bbox": [
+    0,
+    0,
+    1672,
+    941
+  ],
+  "purpose": "full-screen first-person cockpit foreground overlay with transparent windshield"
+}

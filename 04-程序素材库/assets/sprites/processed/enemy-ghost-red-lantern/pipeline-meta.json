@@ -1,0 +1,11 @@
+{
+  "target": "creature",
+  "mode": "single",
+  "prompt": "front-facing haunted red lantern ghost with strong red halo and black mist, modern 16-bit inspired pixel art, solid #FF00FF background, bottom mist anchor",
+  "role": "",
+  "input": "night-cockpit-demo/assets/sprites/raw/enemy-ghost-red-lantern.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "single_size": 448
+}

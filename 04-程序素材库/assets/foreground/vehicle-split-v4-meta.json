@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "cockpit-frame-only-v4",
+    "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_0393fa7a0aaaf896016a4481ec4dd88191a18a9e500ff1edd1.png",
+    "raw": "assets/foreground/cockpit-frame-only-v4-raw.png",
+    "clean": "assets/foreground/cockpit-frame-only-v4.png",
+    "preview": "assets/foreground/cockpit-frame-only-v4-preview.png",
+    "size": [
+      1672,
+      941
+    ],
+    "alpha_bbox": [
+      0,
+      356,
+      1672,
+      941
+    ]
+  },
+  {
+    "slug": "car-hood-movable-v4",
+    "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_0393fa7a0aaaf896016a448258202c819181e54808ac848ce0.png",
+    "raw": "assets/foreground/car-hood-movable-v4-raw.png",
+    "clean": "assets/foreground/car-hood-movable-v4.png",
+    "preview": "assets/foreground/car-hood-movable-v4-preview.png",
+    "size": [
+      1672,
+      357
+    ],
+    "alpha_bbox": [
+      4,
+      12,
+      1667,
+      345
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "marked_source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_00e9b2b571fa9385016a440c24f15881919c02bcecb74cb42c 拷贝.png",
+  "component_crop_box": [
+    124,
+    64,
+    1844,
+    723
+  ],
+  "css_card_size": [
+    306,
+    116
+  ],
+  "rendered_mask_size": [
+    303,
+    116
+  ],
+  "render_offset": [
+    1,
+    0
+  ],
+  "slot_bbox": [
+    48,
+    14,
+    161,
+    93
+  ],
+  "slot_mask_size": [
+    113,
+    79
+  ],
+  "full_mask": "assets/ui/hud-components/energy-user-slot-mask-full.png",
+  "slot_mask": "assets/ui/hud-components/energy-user-slot-mask.png",
+  "diagnostic": "assets/ui/hud-components/energy-user-mask-diagnostic.png",
+  "preview": "assets/ui/hud-components/ai-energy-runtime-fill-preview-user-mask.png"
+}

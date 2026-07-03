@@ -1,0 +1,79 @@
+{
+  "source": "assets/ui/generated-hud-icons-sheet-raw.png",
+  "clean_sheet": "assets/ui/generated-hud-icons-sheet-clean.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "chroma_key": "magenta background plus purple fringe removal",
+  "outputs": [
+    {
+      "file": "assets/ui/hud-icons/time-frame-icon.png",
+      "size": [
+        512,
+        512
+      ],
+      "trimmed_size": [
+        479,
+        480
+      ],
+      "alpha_bbox": [
+        44,
+        44,
+        467,
+        468
+      ]
+    },
+    {
+      "file": "assets/ui/hud-icons/ai-energy-icon.png",
+      "size": [
+        512,
+        512
+      ],
+      "trimmed_size": [
+        335,
+        463
+      ],
+      "alpha_bbox": [
+        116,
+        52,
+        395,
+        459
+      ]
+    },
+    {
+      "file": "assets/ui/hud-icons/life-value-icon.png",
+      "size": [
+        512,
+        512
+      ],
+      "trimmed_size": [
+        451,
+        446
+      ],
+      "alpha_bbox": [
+        58,
+        61,
+        453,
+        451
+      ]
+    },
+    {
+      "file": "assets/ui/hud-icons/radar-frame-icon.png",
+      "size": [
+        512,
+        512
+      ],
+      "trimmed_size": [
+        484,
+        470
+      ],
+      "alpha_bbox": [
+        41,
+        48,
+        471,
+        464
+      ]
+    }
+  ]
+}

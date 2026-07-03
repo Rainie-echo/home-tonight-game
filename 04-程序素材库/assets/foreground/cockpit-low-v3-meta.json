@@ -1,0 +1,17 @@
+{
+  "source": "/Users/rainie/.codex/generated_images/019f1810-83d0-7c22-bfb1-a24d0aa1f3b1/ig_0c1e083e45767648016a446a6fb5a8819194ee688bdb6d5f73.png",
+  "raw": "assets/foreground/cockpit-low-v3-raw.png",
+  "clean": "assets/foreground/cockpit-low-v3.png",
+  "preview": "assets/foreground/cockpit-low-v3-preview.png",
+  "size": [
+    1672,
+    941
+  ],
+  "alpha_bbox": [
+    0,
+    342,
+    1672,
+    941
+  ],
+  "role": "low-occupancy first-person cockpit with prominent hood and unobstructed windshield"
+}

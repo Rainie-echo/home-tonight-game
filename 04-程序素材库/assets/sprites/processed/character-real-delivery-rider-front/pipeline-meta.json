@@ -1,0 +1,11 @@
+{
+  "target": "asset",
+  "mode": "single",
+  "prompt": "ugly threatening front-facing delivery rider on scooter, modern 16-bit inspired pixel art, solid #FF00FF background, clear bottom wheel contact point",
+  "role": "",
+  "input": "night-cockpit-demo/assets/sprites/raw/character-real-delivery-rider-front.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "single_size": 384
+}

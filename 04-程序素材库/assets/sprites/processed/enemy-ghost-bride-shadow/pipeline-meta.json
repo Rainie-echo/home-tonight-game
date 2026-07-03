@@ -1,0 +1,11 @@
+{
+  "target": "creature",
+  "mode": "single",
+  "prompt": "front-facing paper bride ghost shadow with strong red halo and red paper sparks, modern 16-bit inspired pixel art, solid #FF00FF background, bottom mist anchor",
+  "role": "",
+  "input": "night-cockpit-demo/assets/sprites/raw/enemy-ghost-bride-shadow.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "single_size": 448
+}

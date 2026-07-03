@@ -1,0 +1,1 @@
+Low-occupancy first-person horror driving cockpit foreground overlay. Interior only bottom 18-22%, prominent hood/front nose, unobstructed windshield, no rearview mirror, no overhead console, no top obstruction, solid magenta chroma key windshield, no text or UI.

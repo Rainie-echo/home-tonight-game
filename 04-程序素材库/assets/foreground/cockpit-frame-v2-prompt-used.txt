@@ -1,0 +1,1 @@
+First-person horror driving cockpit foreground overlay, 1280x720, central windshield on solid #FF00FF chroma key for transparency, no UI, no text, no numbers, no logos, dark rainy car interior with dashboard, steering wheel, A-pillars, mirror, hood/front edge, cyan and red night lighting.

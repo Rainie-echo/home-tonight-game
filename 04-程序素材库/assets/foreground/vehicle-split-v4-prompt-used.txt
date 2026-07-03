@@ -1,0 +1,1 @@
+Two-layer vehicle foreground: fixed cockpit interior frame only, no hood; separate movable car hood/front nose sprite with clear cyan collision front edge. Both generated on solid #FF00FF chroma key and postprocessed to transparent PNG.

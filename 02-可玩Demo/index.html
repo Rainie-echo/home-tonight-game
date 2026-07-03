@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今晚必须回家 Demo</title>
+    <link rel="stylesheet" href="./styles.css?v=asset-integration-41" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="cockpit cover-active" aria-label="今晚必须回家游戏区域">
+        <canvas id="gameCanvas" width="1280" height="720" aria-label="前方道路"></canvas>
+        <video id="stageOneVideo" class="stage-video-source" src="../04-程序素材库/assets/videos/stage-01-driving-loop.mp4" preload="auto" muted loop playsinline></video>
+        <video id="coverVideo" class="cover-video" src="../04-程序素材库/assets/videos/cover-loop-v1.mp4" preload="auto" autoplay muted loop playsinline></video>
+        <section id="coverOverlay" class="cover-overlay" aria-label="封面页">
+          <button id="showIntro" class="primary-action cover-action">开始游戏</button>
+        </section>
+
+        <header class="hud-top hud-top-new">
+          <img class="top-hud-skin" src="../04-程序素材库/assets/ui/hud-components/top-hud-lifefocus-time-radar-crop-v1.png" alt="" aria-hidden="true" />
+
+          <div class="life-card">
+            <img class="hud-skin life-skin" src="../04-程序素材库/assets/ui/hud-components/life-panel.png" alt="" aria-hidden="true" />
+            <span class="hud-label">生命值</span>
+            <div class="life-bar"><i id="lifeFill"></i></div>
+            <strong id="lifeText">100%</strong>
+            <span class="focus-label">专注值</span>
+            <div class="focus-bar"><i id="focusFill"></i></div>
+            <strong id="focusText">100%</strong>
+          </div>
+
+          <div class="timer-card">
+            <img class="hud-skin timer-skin" src="../04-程序素材库/assets/ui/hud-components/timer-panel.png" alt="" aria-hidden="true" />
+            <span class="time-progress" id="timeProgress" aria-hidden="true"></span>
+            <strong id="surviveTime">00:00</strong>
+            <span id="homeTime">本关剩余 00:50</span>
+            <em id="phaseText">第1关 天还没黑</em>
+          </div>
+
+          <div class="radar-card">
+            <img class="radar-icon-img" src="../04-程序素材库/assets/ui/hud-components/radar-frame.png" alt="" />
+            <span>前方雷达</span>
+            <canvas id="radarCanvas" width="144" height="144" aria-hidden="true"></canvas>
+          </div>
+        </header>
+
+        <section id="disturbance" class="disturbance" hidden>
+          <img id="popupArt" class="popup-art" alt="" hidden />
+          <span id="closePopup" class="close-key" aria-label="按空格关闭惊扰来电">SPACE</span>
+          <span class="disturbance-kicker">惊扰来电</span>
+          <strong id="popupTitle">未知号码</strong>
+          <p id="popupLine">按空格关闭，否则扣专注值</p>
+          <div class="popup-countdown"><i id="popupCountdown"></i></div>
+        </section>
+
+        <section class="drive-note" aria-label="操作提示">
+          <strong id="aiHint">车头前缘判定：危险贴近车头才会触发效果。</strong>
+        </section>
+
+        <section class="hud-bottom" aria-label="AI技能">
+          <button class="skill-btn" data-skill="radar">
+            <img class="skill-icon-img" src="../04-程序素材库/assets/ui/skill-icons/q-radar-pulse.png" alt="" />
+            <span class="skill-key">Q</span>
+            <strong>雷达脉冲</strong>
+            <small id="radarCooldown">就绪</small>
+          </button>
+          <button class="skill-btn" data-skill="horn">
+            <img class="skill-icon-img" src="../04-程序素材库/assets/ui/skill-icons/w-horn-call.png" alt="" />
+            <span class="skill-key">W</span>
+            <strong>智能鸣笛</strong>
+            <small id="hornCooldown">就绪</small>
+          </button>
+          <button class="skill-btn" data-skill="night">
+            <img class="skill-icon-img" src="../04-程序素材库/assets/ui/skill-icons/e-night-vision.png" alt="" />
+            <span class="skill-key">E</span>
+            <strong>夜视摄像头</strong>
+            <small id="nightCooldown">就绪</small>
+          </button>
+          <button class="skill-btn" data-skill="silence">
+            <img class="skill-icon-img" src="../04-程序素材库/assets/ui/skill-icons/r-silence-field.png" alt="" />
+            <span class="skill-key">R</span>
+            <strong>AI静音场</strong>
+            <small id="silenceCooldown">就绪</small>
+          </button>
+        </section>
+
+        <aside class="energy-card" aria-label="AI能量">
+          <img class="hud-skin energy-skin" src="../04-程序素材库/assets/ui/hud-components/ai-energy-panel-empty.png" alt="" aria-hidden="true" />
+          <img id="energyIcon" class="energy-icon" src="../04-程序素材库/assets/ui/hud-icons/ai-energy-icon.png" alt="" aria-hidden="true" />
+          <span id="aiLevelText">AI Lv.1</span>
+          <div class="energy-gauge">
+            <i id="energyFill"></i>
+          </div>
+          <strong id="energyText">0%</strong>
+        </aside>
+
+        <section id="introOverlay" class="overlay-panel page-screen-panel intro-panel" hidden>
+          <img class="page-screen-image" src="../04-程序素材库/assets/ui/page-screens/instruction-page.png" alt="开车前提醒" />
+          <button id="startGame" class="page-hotspot instruction-start" aria-label="开始回家">
+            <span class="visually-hidden">开始回家</span>
+          </button>
+        </section>
+
+        <section id="rewardOverlay" class="overlay-panel reward-panel" hidden>
+          <article>
+            <p class="overline" id="rewardKicker">第1关通过</p>
+            <h2 id="rewardTitle">获得救命喇叭</h2>
+            <p id="rewardText"></p>
+            <div class="result-grid">
+              <span>装备奖励 <strong id="rewardName">救命喇叭</strong></span>
+              <span>下一段路 <strong id="nextStageName">雨越下越大</strong></span>
+            </div>
+            <button id="continueStage" class="primary-action">继续回家</button>
+          </article>
+        </section>
+
+        <section id="gameOverOverlay" class="overlay-panel page-screen-panel result-panel" hidden>
+          <img class="page-screen-image result-art failure-art" src="../04-程序素材库/assets/ui/page-screens/failure-page.png" alt="夜归失败" />
+          <img class="page-screen-image result-art success-art" src="../04-程序素材库/assets/ui/page-screens/success-page.png" alt="安全到家" />
+          <article class="result-copy">
+            <p class="overline" id="resultKicker">结算</p>
+            <h2 id="resultTitle">安全到家</h2>
+            <p id="resultText"></p>
+            <div class="result-grid">
+              <span>生存时间 <strong id="resultTime">00:00</strong></span>
+              <span>驱散怪谈 <strong id="resultGhosts">0</strong></span>
+              <span>避让现实危险 <strong id="resultAvoided">0</strong></span>
+              <span>关闭惊扰 <strong id="resultClosed">0</strong></span>
+            </div>
+          </article>
+          <button id="restartGame" class="page-hotspot result-restart" aria-label="再来一局">
+            <span class="visually-hidden">再来一局</span>
+          </button>
+          <button id="returnHome" class="page-hotspot result-home" aria-label="回到首页">
+            <span class="visually-hidden">回到首页</span>
+          </button>
+        </section>
+      </section>
+    </main>
+
+    <script src="./game.js?v=asset-integration-41"></script>
+  </body>
+</html>

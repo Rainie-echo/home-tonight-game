@@ -1,0 +1,11 @@
+{
+  "target": "asset",
+  "mode": "single",
+  "prompt": "ugly creepy front-facing crouching adult road obstacle, modern 16-bit inspired pixel art, solid #FF00FF background, clear knees and feet contact point",
+  "role": "",
+  "input": "night-cockpit-demo/assets/sprites/raw/character-real-crouching-adult-front.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "single_size": 384
+}

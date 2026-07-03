@@ -1,0 +1,3 @@
+HUD component set for 今晚必须回家: cyberpunk horror first-person driving HUD components on solid #FF00FF background. Four generated pieces: wide life value panel with shield-heart icon and segmented health slots; center digital countdown timer panel with empty display area; circular radar outer frame with open center for realtime dots; AI energy gauge panel with blue arc and lightning/data core. No baked text, no labels, runtime overlays values and canvas points.
+
+AI energy empty replacement: empty dark segmented semicircular arc, no filled blue energy, runtime fills the segments based on state.energy. Source: built-in image_gen.
