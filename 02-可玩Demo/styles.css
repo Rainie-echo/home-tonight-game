@@ -151,6 +151,13 @@ button {
   pointer-events: none;
 }
 
+.cockpit.cover-active.layout-manual .hud-top,
+.cockpit.cover-active.layout-manual .hud-bottom,
+.cockpit.intro-active.layout-manual .hud-top,
+.cockpit.intro-active.layout-manual .hud-bottom {
+  display: none;
+}
+
 .life-card,
 .timer-card,
 .radar-card,

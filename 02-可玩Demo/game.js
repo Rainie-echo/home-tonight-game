@@ -877,10 +877,10 @@ function getCarFrontHitbox(w, h) {
     const boxY = (calibratedBox.y / LAYOUT_COORDINATE_HEIGHT) * h;
     const boxW = (calibratedBox.w / LAYOUT_COORDINATE_WIDTH) * w;
     const boxH = (calibratedBox.h / LAYOUT_COORDINATE_HEIGHT) * h;
-    const topY = boxY + boxH * 0.5;
-    const activeBottomY = boxY + boxH * 0.78;
-    const topHalf = boxW * 0.18;
-    const activeBottomHalf = boxW * 0.29;
+    const topY = boxY + boxH * 0.28;
+    const activeBottomY = Math.min(h, boxY + boxH * 1.04);
+    const topHalf = boxW * 0.2;
+    const activeBottomHalf = boxW * 0.4;
     return {
       centerX: boxX + boxW / 2 + motion.offsetX,
       topY,
